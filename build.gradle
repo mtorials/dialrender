@@ -1,0 +1,28 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+}
+
+group 'de.mtorials'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'de.mtorials:dial-phone:0.3.0-alpha'
+    compile 'io.github.microutils:kotlin-logging:1.7.10'
+    compile group: "org.http4k", name: "http4k-core", version: "3.254.0"
+    compile group: "org.http4k", name: "http4k-server-jetty", version: "3.254.0"
+    compile group: "org.http4k", name: "http4k-format-jackson", version: "3.251.0"
+    compile group: "org.http4k", name: "http4k-client-okhttp", version: "3.254.0"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
