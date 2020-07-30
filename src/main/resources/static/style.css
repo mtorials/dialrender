@@ -1,0 +1,54 @@
+body {
+
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+aside {
+    width: 10rem;
+    background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+}
+
+.acc {
+    background-color: orange;
+}
+
+.dark {
+    background-color: grey;
+}
+
+.box {
+    margin-bottom: 1rem;
+}
+
+header {
+    padding: 1rem;
+}
+
+.padded {
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}

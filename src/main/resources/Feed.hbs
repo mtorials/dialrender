@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matrix Feed Viewer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <div class="box acc">
+        <h1>{{ feedName }}</h1>
+    </div>
+</header>
+<div class="flex-container">
+    <div class="main">
+        {{#each posts}}
+            <div class="box padded dark">
+                <h2>{{ this.body }}</h2>
+            </div>
+        {{/each}}
+    </div>
+    <aside class="padded">
+        <a class="entry" href="/">
+            Index
+        </a>
+        {{#each otherFeedsName}}
+            <a class="entry" href="/{{ this }}">{{ this }}</a>
+        {{/each}}
+    </aside>
+</div>
+</body>
+</html>

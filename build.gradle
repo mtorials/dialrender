@@ -6,7 +6,7 @@ group 'de.mtorials'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
+    jcenter()
     maven { url 'https://jitpack.io' }
 }
 
@@ -17,7 +17,9 @@ dependencies {
     compile group: "org.http4k", name: "http4k-core", version: "3.254.0"
     compile group: "org.http4k", name: "http4k-server-jetty", version: "3.254.0"
     compile group: "org.http4k", name: "http4k-format-jackson", version: "3.251.0"
-    compile group: "org.http4k", name: "http4k-client-okhttp", version: "3.254.0"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8'
+    compile group: "org.http4k", name: "http4k-template-handlebars", version: "3.254.0"
+
 }
 
 compileKotlin {
