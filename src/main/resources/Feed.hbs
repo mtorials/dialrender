@@ -1,31 +1,34 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <title>Matrix Feed Viewer</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<header>
-    <div class="box acc">
-        <h1>{{ feedName }}</h1>
-    </div>
-</header>
 <div class="flex-container">
+    <aside class="padded">
+        <header class="acc">
+            <h1><a href="/"><u class="black">Micromes Matrix Social Feed Viewer</u></a></h1></h1>
+        </header>
+        <a class="entry acc" href="/">
+            Index
+        </a>
+        <i>Feeds:</i>
+        {{#each otherFeedsName}}
+            <a class="entry acc" href="/{{ this }}">{{ this }}</a>
+        {{/each}}
+    </aside>
     <div class="main">
+        <div class="box padded yel">
+            <h1><u>#{{ feedName }}</u></h1>
+        </div>
         {{#each posts}}
-            <div class="box padded dark">
-                <h2>{{ this.body }}</h2>
+            <div class="box padded yel">
+                <a>{{ this.body }}</a>
             </div>
         {{/each}}
     </div>
-    <aside class="padded">
-        <a class="entry" href="/">
-            Index
-        </a>
-        {{#each otherFeedsName}}
-            <a class="entry" href="/{{ this }}">{{ this }}</a>
-        {{/each}}
-    </aside>
 </div>
 </body>
 </html>
